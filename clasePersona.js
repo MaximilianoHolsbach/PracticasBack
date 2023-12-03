@@ -42,7 +42,7 @@ class Contador {
         this.contador = 0
         Contador.contGlobal++
     }
-    agregar(){
+    contar(){
         this.contador++
     }
     getcontador(){
@@ -50,6 +50,12 @@ class Contador {
     }
     static obtenercontGlobal(){
         return Contador.contGlobal
+    }
+    getContadorGlobal(){
+        console.log(Contador.contGlobal)
+    }
+    getResponsable(){
+        console.log(this.responsable)
     }
 }
 
@@ -60,11 +66,12 @@ const responsable2 = new Contador("Lucia")
 
 const responsable3 = new Contador("Lucia")
 
-responsable1.agregar()
-responsable1.agregar()
+responsable1.contar()
+responsable1.contar()
 console.log(responsable1.getcontador())
+responsable1.getResponsable()
+responsable1.getContadorGlobal()
 
-console.log(Contador.obtenercontGlobal())
 
 
 
